@@ -70,13 +70,14 @@ const Container = styled.div`
   gap: 1rem;
   align-items: center;
   background: rgb(32, 0, 36);
-  background: rgb(116, 12, 102);
-  background: linear-gradient(
-    90deg,
-    rgba(116, 12, 102, 1) 0%,
-    rgba(162, 0, 255, 1) 50%,
-    rgba(0, 10, 255, 1) 100%
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
   );
+
   .container {
     height: 85vh;
     width: 85vw;

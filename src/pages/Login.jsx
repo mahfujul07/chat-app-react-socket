@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { loginRoute } from "../utils/APIRoutes";
+import "./style.css";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -99,13 +100,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background: rgb(116, 12, 102);
-  background: linear-gradient(
-    90deg,
-    rgba(116, 12, 102, 1) 0%,
-    rgba(162, 0, 255, 1) 50%,
-    rgba(0, 10, 255, 1) 100%
-  );
+  
   .brand {
     display: flex;
     align-items: center;
