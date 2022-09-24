@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import Logo from "../assets/logo.svg";
 
 export default function Contacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
@@ -9,7 +10,7 @@ export default function Contacts({ contacts, changeChat }) {
     const data = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     );
-    setCurrentUserName(data?.username);
+    setCurrentUserName(data.username);
     setCurrentUserImage(data.avatarImage);
   }, []);
   const changeCurrentChat = (index, contact) => {
@@ -21,10 +22,11 @@ export default function Contacts({ contacts, changeChat }) {
       {currentUserImage && currentUserImage && (
         <Container>
           <div className="brand">
-            <h3>chatify</h3>
+            <img src={Logo} alt="logo" />
+            <h3>snappy</h3>
           </div>
           <div className="contacts">
-            {contacts?.map((contact, index) => {
+            {contacts.map((contact, index) => {
               return (
                 <div
                   key={contact._id}
@@ -35,12 +37,12 @@ export default function Contacts({ contacts, changeChat }) {
                 >
                   <div className="avatar">
                     <img
-                      src={`data:image/svg+xml;base64,${contact?.avatarImage}`}
+                      src={`data:image/svg+xml;base64,${contact.avatarImage}`}
                       alt=""
                     />
                   </div>
                   <div className="username">
-                    <h3>{contact?.username}</h3>
+                    <h3>{contact.username}</h3>
                   </div>
                 </div>
               );
@@ -51,7 +53,6 @@ export default function Contacts({ contacts, changeChat }) {
               <img
                 src={`data:image/svg+xml;base64,${currentUserImage}`}
                 alt="avatar"
-                key={currentUserImage}
               />
             </div>
             <div className="username">
@@ -121,7 +122,6 @@ const Container = styled.div`
       background-color: #9a86f3;
     }
   }
-
   .current-user {
     background-color: #0d0d30;
     display: flex;
