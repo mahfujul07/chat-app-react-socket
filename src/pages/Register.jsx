@@ -160,8 +160,6 @@ const FormContainer = styled.div`
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
-    border-radius: 0.4rem;
     color: white;
     width: 100%;
     font-size: 1rem;

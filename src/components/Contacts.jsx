@@ -10,7 +10,7 @@ export default function Contacts({ contacts, changeChat }) {
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     );
     setCurrentUserName(data?.username);
-    setCurrentUserImage(data.avatarImage);
+    setCurrentUserImage(data?.avatarImage);
   }, []);
   const changeCurrentChat = (index, contact) => {
     setCurrentSelected(index);
