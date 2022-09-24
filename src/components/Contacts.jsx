@@ -23,7 +23,7 @@ export default function Contacts({ contacts, changeChat }) {
           <div className="brand">
             <h3>chatify</h3>
           </div>
-          <div className="contacts">
+          {/* <div className="contacts">
             {contacts.map((contact, index) => {
               return (
                 <div
@@ -45,7 +45,7 @@ export default function Contacts({ contacts, changeChat }) {
                 </div>
               );
             })}
-          </div>
+          </div> */}
           <div className="current-user">
             <div className="avatar">
               <img
